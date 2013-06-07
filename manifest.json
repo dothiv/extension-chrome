@@ -1,0 +1,16 @@
+{
+    "name": ".hiv",
+    "version": "1.0",
+    "description": "Prepare your browser for the era of .hiv!",
+    "permissions": [
+        "bookmarks",
+        "http://hiv.enit.biz/"
+    ],
+    "browser_action": {
+            "default_title": ".hiv",
+            "default_icon": "ribbon.png",
+            "default_popup": "popup.html"
+    },
+    "manifest_version": 2,
+    "content_security_policy": "script-src 'self' 'unsafe-eval' https://ajax.googleapis.com; object-src 'self' https://hiv.enit.biz"
+}

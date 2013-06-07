@@ -1,0 +1,31 @@
+<p ng-show="status==0">Collecting all your bookmarks. Boy, you have a lot!</p>
+
+<p ng-show="status==1">We're checking your bookmarks. Please allow us to look up our data base.</p>
+
+<div ng-show="changes.length > 0 && (status==2||status==3)">
+    <p ng-show="status==2">Alright, we found these .hiv domains that match some of your bookmarks!</p>
+    <p ng-show="status==3">We updated already {{ changed }} of your bookmarks!</p>
+
+    <table>
+        <tbody ng-repeat="c in changes">
+            <tr>
+                <td>{{ c.bookmark.title }}<br/><small>{{ c.bookmark.url }}</small></td>
+                <td>{{ c.hivdomain }}</td>
+                <td>{{ c.status }}</td>
+                <td><button type="button" ng-click="noChangeOn(c)" ng-disabled="status==3">&times;</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button ng-show="status==2" ng-click="apply()" type="button">yeah, gimme the .hiv sites</button>
+</div>
+<div ng-show="changes.length==0 && status==2">
+    <p>We're sorry. There are no more .hiv domains that match your bookmarks. Sad? <a href="http://dothiv.org">Stay tuned</a>, there are more .hiv domains coming!</p>
+    <p><a href="#/">start over</a></p>
+</div>
+
+<div ng-show="status==4">
+    <p>You're now using {{ changed }} more .hiv-enabled bookmarks. Enjoy!</p>
+    <p><label><input type="checkbox" name="autoupdate"> for new .hiv sites, update my bookmarks automatically</label></p>
+</div>
+
