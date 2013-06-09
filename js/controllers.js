@@ -2,9 +2,15 @@
 
 /* Controllers */
 angular.module('dothivExtChrome.controllers', [])
-    .controller('WelcomeCtrl', [function() {
+    .controller('WelcomeCtrl', ['$scope', 'settings', function($scope, settings) {
+        $scope.settings = {
+            'autoupdate': settings.getAutoupdate(),
+        }
+        $scope.$watch('settings.autoupdate', function() {
+            settings.setAutoupdate($scope.settings.autoupdate);
+        });
     }])
-    .controller('BookmarkCheckCtrl', ['$scope', 'alternatives', function($scope, alternatives) {
+    .controller('BookmarkCheckCtrl', ['$scope', 'alternatives', 'settings', function($scope, alternatives, settings) {
         // list of all bookmarks
         var bookmarks = {};
         $scope.bookmarks = bookmarks;
@@ -134,6 +140,14 @@ angular.module('dothivExtChrome.controllers', [])
             if ($scope.changed > 0 && $scope.changed == changes.length) {
                 $scope.status = 4;
             }
+        });
+
+        // TODO duplicate code, see WelcomeCtrl
+        $scope.settings = {
+            'autoupdate': settings.getAutoupdate(),
+        }
+        $scope.$watch('settings.autoupdate', function() {
+            settings.setAutoupdate($scope.settings.autoupdate);
         });
     
         // collect list of all bookmarks, this starts the whole process

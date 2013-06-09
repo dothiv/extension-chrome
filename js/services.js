@@ -8,3 +8,18 @@ services.factory('alternatives', function($resource) {
             'query': {method: 'GET', params: { q: "" }, isArray: true}
         });
 });
+
+services.factory('settings', function() {
+    function setAutoupdate($value) {
+        localStorage['autoupdate'] = $value ? 1 : 0;
+    }
+    
+    function getAutoupdate() {
+        return localStorage['autoupdate'] == 1 ? true : false;
+    }
+    
+    return {
+        'setAutoupdate': setAutoupdate,
+        'getAutoupdate': getAutoupdate,
+    };
+});
