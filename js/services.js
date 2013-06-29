@@ -4,7 +4,7 @@
 var services = angular.module('dothivExtChrome.services', ['ngResource']);
 
 services.factory('alternatives', function($resource) {
-    return $resource('http://dothiv.bp/app_dev.php/api/alternatives/:id', {id: '@id'}, {
+    return $resource('http://hiv.enit.biz/app_dev.php/api/alternatives/:id', {id: '@id'}, {
             'query': {method: 'GET', params: { q: "" }, isArray: true}
         });
 });
@@ -20,6 +20,6 @@ services.factory('settings', function() {
     
     return {
         'setAutoupdate': setAutoupdate,
-        'getAutoupdate': getAutoupdate,
+        'getAutoupdate': getAutoupdate
     };
 });

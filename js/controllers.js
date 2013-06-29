@@ -4,7 +4,7 @@
 angular.module('dothivExtChrome.controllers', [])
     .controller('WelcomeCtrl', ['$scope', 'settings', function($scope, settings) {
         $scope.settings = {
-            'autoupdate': settings.getAutoupdate(),
+            'autoupdate': settings.getAutoupdate()
         }
         $scope.$watch('settings.autoupdate', function() {
             settings.setAutoupdate($scope.settings.autoupdate);
@@ -144,7 +144,7 @@ angular.module('dothivExtChrome.controllers', [])
 
         // TODO duplicate code, see WelcomeCtrl
         $scope.settings = {
-            'autoupdate': settings.getAutoupdate(),
+            'autoupdate': settings.getAutoupdate()
         }
         $scope.$watch('settings.autoupdate', function() {
             settings.setAutoupdate($scope.settings.autoupdate);
