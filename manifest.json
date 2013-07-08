@@ -5,9 +5,9 @@
     
     "description": "Prepare your browser for the era of .hiv!",
     "icons": {
-        "16": "dothiv16.png",
-        "48": "dothiv48.png",
-        "128": "dothiv128.png"                
+        "16": "app/img/dothiv16.png",
+        "48": "app/img/dothiv48.png",
+        "128": "app/img/dothiv128.png"
     },
     
     "permissions": [
@@ -17,8 +17,8 @@
     
     "browser_action": {
         "default_title": ".hiv",
-        "default_icon": "ribbon.png",
-        "default_popup": "popup.html"
+        "default_icon": "app/img/ribbon.png",
+        "default_popup": "app/popup.html"
     },
     
     "content_security_policy": "script-src 'self' 'unsafe-eval' https://ajax.googleapis.com; object-src 'self' https://hiv.enit.biz"
