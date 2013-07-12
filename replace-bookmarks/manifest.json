@@ -1,9 +1,9 @@
 {
-    "name": ".hiv",
+    "name": ".hiv Bookmarks",
     "version": "0.1",
     "manifest_version": 2,
     
-    "description": "Prepare your browser for the era of .hiv!",
+    "description": "Prepare your browser bookmarks for the era of .hiv!",
     "icons": {
         "16": "app/img/dothiv16.png",
         "48": "app/img/dothiv48.png",
@@ -16,7 +16,7 @@
     ],
     
     "browser_action": {
-        "default_title": ".hiv",
+        "default_title": ".hiv your bookmarks",
         "default_icon": "app/img/ribbon.png",
         "default_popup": "app/popup.html"
     },

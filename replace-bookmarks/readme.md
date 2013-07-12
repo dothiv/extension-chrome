@@ -1,19 +1,20 @@
-Chrome Browser-Plugin,
+Chrome Browser-Plugin
 ======================
-das in denjenigen Bookmarks des Chrome Browsers, für die die Domain bei .hiv registriert ist,
-die Top-Level-Domain gegen .hiv austauscht.
+exchanges the top-level-domain of that chrome-bookmarks, which belong to a domain registered at the .hiv organization.
 
 API
 ---
 s. `http://hiv.enit.biz/app_dev.php/api/doc/`
 
 ========================
-TODOs
+TODO s
 
-1. Config mit Server-Url
+1. Config with Server-Url + ...
+2. Möglichkeit, alte Bookmarks wiederherzustellen
+3. Favicon erhalten? Wie Chrome-API oder extra-Call oder ...?
 2. Funktionalität, die auch die anderen Plugins benötigen, herausziehen
 
-Implementierung und Test
+Implementation & Testing
 ========================
 
 taken from `https://github.com/angular/angular-seed/blob/master/README.md`
