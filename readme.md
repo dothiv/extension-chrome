@@ -13,6 +13,7 @@ Wie: Per Browser-Plugins
 
 2. Diese Seite gibt es auch-Icon:
   * Patricia (ab 23.06.): http://hiv.enit.biz/app_dev.php/api/doc/
+  s. pageActions
 
 3. 'Es gibt auch' in der Such-Suggestion-Liste
 
@@ -31,6 +32,7 @@ Start with Plugin 'Es gibt auch' in der Such-Suggestion-Liste'
 1. Karma-Tests
 2. Config mit Server-Url
 3. Alle Alternativen ziehen und in localstorage speichern
+   + an private mode(->kein localstorage) denken
 4.
 
 Implementierung und Test
