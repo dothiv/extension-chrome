@@ -13,64 +13,8 @@
             return $resource(baseUrl + '/:id', {id: '@id'}, {
                 'query': {method: 'GET', params: { q: "" }, isArray: true}
             });
-        })
-        .factory('$appStorage', function () {
-            var keyPrefix = 'hiv-';
-            return {
-
-                version: function () {
-                    return '1';
-                },
-
-                prefixKey: function (key) {
-                    return keyPrefix + this.version() + '-' + key;
-                },
-
-                put: function (key, value) {
-                    key = this.prefixKey(key);
-                    value = JSON.stringify(value);
-                    localStorage.setItem(key, value);
-                },
-
-                get: function (key) {
-                    key = this.prefixKey(key);
-                    var value = localStorage.getItem(key);
-                    return JSON.parse(value);
-                },
-
-                erase: function (key) {
-                    key = this.prefixKey(key);
-                    localStorage.removeItem(key);
-                },
-
-                flush: function () {
-                    while (localStorage.length) localStorage.removeItem(localStorage.key(0));
-                },
-
-                isPresent: function (key) {
-                    return !!this.get(key);
-                }
-
-            };
-        })
-        .factory('$alternativesSearcher', ['$appStorage', '$resource', function ($storage, $resource) {
-            var alternativesKey = 'alternatives';
-
-            return {
-                getAlternatives: function (onSuccess, onFailure) {
-                    var that = this;
-
-                    var key = alternativesKey;
-                    if ($storage.isPresent(key)) {
-                        onSuccess($storage.get(key));
-                        return;
-                    }
-
-                    // TODO go on here...
-                }
-            };
-        }])
-        .factory('$bookmarks', function () {
+        }).
+        factory('$bookmarks', function () {
             /**
              *  converts the chrome bookmarks nodes to a map of {domain:[list of chrome bookmark leaf nodes of given domain],...}
              */

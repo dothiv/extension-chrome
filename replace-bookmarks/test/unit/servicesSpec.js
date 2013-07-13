@@ -32,21 +32,6 @@
                 eql(expectedChromeBookmarkNodesWithDomainChanges);
         }));
 
-
-        it('should store and save data properly', inject(['$appStorage',function($storage) {
-            var key = 'key', value = 'value';
-            $storage.put(key, value);
-            assume($storage.isPresent(key)).to.equal(true);
-            assume($storage.get(key)).to.equal(value);
-
-            $storage.erase(key);
-            assume($storage.isPresent(key)).to.equal(false);
-
-            $storage.put(key, value);
-            $storage.flush();
-            assume($storage.isPresent(key)).to.equal(false);
-        }]));
-
         describe("test applyChangesToChromeBookmarks", function () {
             var callback;
             beforeEach(function () {

@@ -12,7 +12,7 @@ TODO s
 1. Config with Server-Url + ...
 2. Möglichkeit, alte Bookmarks wiederherzustellen
 3. Favicon erhalten? Wie Chrome-API oder extra-Call oder ...?
-2. Funktionalität, die auch die anderen Plugins benötigen, herausziehen
+2. Funktionalität, die auch die anderen Plugins benötigen, herausziehen: Welche?
 
 Implementation & Testing
 ========================

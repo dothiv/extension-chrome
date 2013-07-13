@@ -2,7 +2,7 @@
   "name": ".hiv Alternative",
   "version": "1.0",
   "description": "Shows an .hiv-alternative for urls which have a domain, registered at the .hiv-organization",
-  "background": { "scripts": ["js/chrome-page-action.js"] },
+  "background": { "scripts": ["js/lib/require.js", "js/lib/qwest.js", "js/requirejsConfig.js", "js/chrome-page-action.js"] },
   "page_action" :
   {
     "default_icon" : "img/ribbon.png",
